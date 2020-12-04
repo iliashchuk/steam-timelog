@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import s from './App.module.css';
 import { HowLongToBeatService } from 'howlongtobeat';
 
 const hltb = new HowLongToBeatService();
@@ -12,13 +12,13 @@ const fetchAndLogWitcher = async () => {
 function App() {
   fetchAndLogWitcher();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className={s.app}>
+      <header className={s.appHeader}>
+        <img src={logo} className={s.appLogo} alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+        <a className={s.appLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
       </header>
