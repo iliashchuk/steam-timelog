@@ -1,0 +1,17 @@
+/dist
+/lib
+/vendor
+/node_modules
+
+package-lock.json
+
+.browserslistrc
+.eslintignore
+.prettierignore
+.editorconfig
+.gitkeep
+.gitignore
+
+**/*.png
+**/*.ico
+**/*.snap
