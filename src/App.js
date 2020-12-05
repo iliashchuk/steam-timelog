@@ -17,14 +17,7 @@ function App() {
     <GameProgressContextProvider>
       <div className={s.app}>
         <header className={s.appHeader}>
-          <GameCard></GameCard>
-          <img src={logo} className={s.appLogo} alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a className={s.appLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
+          <GameCard />
         </header>
       </div>
     </GameProgressContextProvider>
