@@ -39,7 +39,7 @@
   }
   &:hover {
     box-shadow: 0 8px 16px 3px black;
-    transform: translateY(-3px) scale(1.05) rotateX(15deg);
+    transform: translateY(-3px) scale(1.05);
     figcaption {
       transform: translateY(-100%);
       transition: 0.3s;
