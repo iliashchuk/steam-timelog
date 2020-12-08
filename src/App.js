@@ -1,26 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
+
 import s from './App.module.css';
-import { HowLongToBeatService } from 'howlongtobeat';
-import { GameCard } from './Dashboard/@components';
-import { GameProgressContextProvider } from './Dashboard/@context';
-
-const hltb = new HowLongToBeatService();
-
-const fetchAndLogWitcher = async () => {
-  const withcerResults = await hltb.search('Witcher 3');
-  console.log(withcerResults);
-};
+import { GamesList } from './Dashboard/@components/GamesList/GamesList';
+import { GameStore } from './Dashboard/@context';
 
 function App() {
-  fetchAndLogWitcher();
   return (
-    <GameProgressContextProvider>
+    <GameStore>
       <div className={s.app}>
         <header className={s.appHeader}>
-          <GameCard />
+          <GamesList />
         </header>
       </div>
-    </GameProgressContextProvider>
+    </GameStore>
   );
 }
 
