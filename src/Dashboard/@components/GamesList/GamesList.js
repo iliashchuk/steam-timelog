@@ -1,37 +1,29 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 
-import { HowLongToBeatService } from 'howlongtobeat';
-import { setGames, setGamesLoading, setGamesDone, GamesContext } from '../../@context';
+import { setGames, setGamesLoading, setGamesDone, useGameContext } from '../../@context';
+import { mockGames as requestMockedGames } from '../../@mocks';
 import s from './GamesList.module.scss';
 import { GameCard } from '../GameCard';
 
-const hltb = new HowLongToBeatService();
-
-const fetchGames = searchQuery => {
-  return hltb.search(searchQuery);
-};
-
 export const GamesList = () => {
-  const [state, dispatch] = useContext(GamesContext);
+  const [state, dispatch] = useGameContext();
 
   useEffect(() => {
-    const fetchAndSetGames = async gameQuery => {
+    const fetchAndSetGames = async () => {
       dispatch(setGamesLoading());
-      dispatch(setGames(await fetchGames(gameQuery)));
+      dispatch(setGames(await requestMockedGames()));
       dispatch(setGamesDone());
     };
-    const gameQuery = prompt('Choose a game.');
-    if (gameQuery) {
-      console.log(gameQuery);
-      fetchAndSetGames(gameQuery);
-    }
+    fetchAndSetGames();
   }, [dispatch]);
 
   return (
     <div className={s.root}>
-      {state.games.map(game => (
-        <GameCard game={game}></GameCard>
-      ))}
+      {state.isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        state.games.map(game => <GameCard key={game.id} game={game}></GameCard>)
+      )}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { createContext, useReducer } from 'react';
 import { reducer } from './reducer';
 
@@ -13,4 +13,8 @@ export const GameStore = ({ children }) => {
   return <GamesContext.Provider value={[state, dispatch]}>{children}</GamesContext.Provider>;
 };
 
-export const GamesContext = createContext();
+export const useGameContext = () => {
+  return useContext(GamesContext);
+};
+
+const GamesContext = createContext();
