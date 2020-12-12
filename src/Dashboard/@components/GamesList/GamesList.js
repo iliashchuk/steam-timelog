@@ -18,9 +18,9 @@ export const GamesList = () => {
   }, [dispatch]);
 
   return (
-    <div className={s.root}>
+    <div className={s.gamesListContainer}>
       {state.isLoading ? (
-        <div>Loading...</div>
+        <div className={s.loader} />
       ) : (
         state.games.map(game => <GameCard key={game.id} game={game}></GameCard>)
       )}
