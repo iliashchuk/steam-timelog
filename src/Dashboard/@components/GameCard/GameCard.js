@@ -3,9 +3,9 @@ import s from './GameCard.module.scss';
 
 export const GameCard = ({ game }) => {
   return (
-    <figure className={s.gameCard}>
+    <div className={s.gameCard}>
       <img src={game.imageUrl} alt={game.name} />
-      <figcaption>{game.name}</figcaption>
-    </figure>
+      <span>{game.name}</span>
+    </div>
   );
 };

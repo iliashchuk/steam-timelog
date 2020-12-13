@@ -1,7 +1,7 @@
 .gameCard {
-  width: 180px;
-  height: 270px;
-  margin: 20px;
+  width: 120px;
+  height: 180px;
+  margin: 18px 18px 0 0;
   overflow: hidden;
   box-shadow: 0 5px 10px black;
   transform: translateZ(0);
@@ -30,12 +30,12 @@
     content: '';
     width: 360px;
     height: 270px;
-    top: -90%;
+    top: -70%;
     left: 0;
     background: linear-gradient(to top, transparent, #fff 15%, rgba(#fff, 0.5));
     opacity: 0.1;
     transition: 0.3s;
-    transform: rotate(45deg);
+    transform: rotate(40deg);
   }
   &:hover {
     box-shadow: 0 8px 16px 3px black;
