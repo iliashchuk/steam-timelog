@@ -1,3 +1,26 @@
-.dashboardWrapper {
-  display: flex;
+.root {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.sidebarSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+}
+
+.gamesListSection {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 50%;
+}
+
+.gameFormSection {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35%;
 }

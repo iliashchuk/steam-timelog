@@ -6,12 +6,18 @@ import s from './Dashboard.module.scss';
 
 export const Dashboard = () => {
   return (
-    <div className={s.dashboardWrapper}>
-      <GameStore>
-        <Sidebar />
-        <GamesList />
-        <GameForm />
-      </GameStore>
-    </div>
+    <GameStore>
+      <div className={s.root}>
+        <div className={s.sidebarSection}>
+          <Sidebar />
+        </div>
+        <div className={s.gamesListSection}>
+          <GamesList />
+        </div>
+        <div className={s.gameFormSection}>
+          <GameForm />
+        </div>
+      </div>
+    </GameStore>
   );
 };
