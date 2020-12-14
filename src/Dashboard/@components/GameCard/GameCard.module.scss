@@ -13,16 +13,18 @@
     height: 100%;
   }
 
-  figcaption {
+  p {
+    text-align: center;
+    width: 120px;
     color: white;
     position: absolute;
     font-size: 14px;
     font-weight: bold;
-    padding: 20px;
-    padding-bottom: 10px;
-    text-shadow: 1px 1px 1px black;
+    padding: 10px;
+    text-shadow: 1px 1px 5px black;
     transform: none;
     transition: 00.3s;
+    margin: 0;
   }
 
   &:after {
@@ -40,12 +42,12 @@
   &:hover {
     box-shadow: 0 8px 16px 3px black;
     transform: translateY(-3px) scale(1.05);
-    figcaption {
+    p {
       transform: translateY(-100%);
       transition: 0.3s;
     }
     &:after {
-      transform: rotate(25deg);
+      transform: rotate(40deg);
       top: -40%;
       opacity: 0.13;
     }

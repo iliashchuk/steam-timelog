@@ -5,7 +5,7 @@ export const GameCard = ({ game }) => {
   return (
     <div className={s.gameCard}>
       <img src={game.imageUrl} alt={game.name} />
-      <span>{game.name}</span>
+      <p>{game.name}</p>
     </div>
   );
 };

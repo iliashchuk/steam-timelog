@@ -2,5 +2,5 @@ import React from 'react';
 import s from './Sidebar.module.scss';
 
 export const Sidebar = () => {
-  return <div className={s.sidebarContainer}>SIDEBAR</div>;
+  return <div className={s.root}>SIDEBAR</div>;
 };

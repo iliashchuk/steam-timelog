@@ -18,7 +18,7 @@ export const GamesList = () => {
   }, [dispatch]);
 
   return (
-    <div className={s.gamesListContainer}>
+    <div className={s.root}>
       {state.isLoading ? (
         <div className={s.loader} />
       ) : (
