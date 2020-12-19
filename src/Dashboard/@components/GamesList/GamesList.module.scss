@@ -1,4 +1,4 @@
-.gamesListContainer {
+.root {
   display: flex;
   flex-wrap: wrap;
   background-color: #282c34;
@@ -7,7 +7,6 @@
 }
 
 .loader {
-
   position: fixed;
   top: 50%;
   margin-left: auto;
