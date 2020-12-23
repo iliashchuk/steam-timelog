@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  line-height: 10vh;
+  padding: 0 10vw;
+  color: white;
+  background-color: #282c34;
+}
+
+.searchContainer {
+  width: 544px;
+  min-width: 344px;
+}

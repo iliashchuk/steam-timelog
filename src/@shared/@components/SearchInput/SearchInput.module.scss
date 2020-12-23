@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 1px 2px 8px black;
+  margin: 16px 24px;
+  min-width: inherit;
+  border-radius: 4px;
+}
+
+.searchInput {
+  flex: 5;
+  min-width: 200px;
+  padding-right: 0;
+  input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.searchDropdown {
+  flex: 3;
+  min-width: 92px;
+}
+
+.searchButton {
+  flex: 1;
+  min-width: 72px;
+  padding-left: 0;
+  button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
