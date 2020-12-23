@@ -1,7 +1,6 @@
 .root {
   display: block;
   width: 100%;
-  padding: 16px 24px;
 }
 
 .label {
@@ -22,10 +21,9 @@
   box-sizing: border-box;
   border-radius: 4px;
   padding: 8px 16px;
-  font-size: 14px;
   outline: none;
 
   &:focus {
-    border: 1px solid #1fc6f0;
+    border: 1px solid #7212b3e8;
   }
 }

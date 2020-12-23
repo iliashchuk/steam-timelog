@@ -2,24 +2,35 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
+  font-family: arial;
+  font-size: 14px;
+}
+
+.controlBarSection {
+  position: fixed;
+  height: 64px;
+  width: 100%;
+  z-index: 9;
 }
 
 .sidebarSection {
   position: fixed;
-  height: 100vh;
+  top: 64px;
+  height: 90vh;
   width: 15%;
 }
 
 .gamesListSection {
   position: absolute;
-  top: 0;
+  top: 64px;
   left: 15%;
   width: 50%;
 }
 
 .gameFormSection {
   position: fixed;
-  height: 100vh;
+  top: 64px;
+  height: 90vh;
   right: 0;
   width: 35%;
 }
